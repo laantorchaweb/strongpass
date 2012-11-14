@@ -5,8 +5,7 @@
       defaults = {
             strong: 'Strong!',
             medium: 'Medium!',
-            weak: 'Weak!',
-            warning: 'empty'
+            weak: 'Weak!'
       };
 
   function Plugin( element, options ) {
@@ -25,17 +24,17 @@
          
          var _this = this;
 
-         if( this.options.warning === 'empty' ) {
+         if( !this.options.warning ) {
           this.createAlert();
          }
 
         $(this.element).keyup(function(e){
-           var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
-           var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
-           var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+          var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+          var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+          var enoughRegex = new RegExp("(?=.{6,}).*", "g");
            
-           var test = $(_this.element).val();
-           var $pass = $(_this.options.warning);
+          var test  = $(_this.element).val(),
+              $pass = $(_this.options.warning);
 
            if (false === enoughRegex.test(test)) {
               $pass.removeClass().addClass('empty').html('More Characters');
