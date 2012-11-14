@@ -8,10 +8,9 @@ body {
   margin-top: 40px;
 }
 
-
-
-
-
+.empty {
+  background-color: #ccc;
+}
 .ok {
    background-color:green;
 }
@@ -22,7 +21,7 @@ body {
    background-color:red;
 }
 
-#pass-result{
+#strongPass {
     text-transform:uppercase;
     color:white;
     padding:5px;
