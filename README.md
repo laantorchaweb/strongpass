@@ -3,7 +3,7 @@ Strong Passwords Plugin
 
 A jQuery plugin to detect if the user is entering a strong password.
 
-##How to use the plugin
+###How to use the plugin
 You can initialize the plugin by giving the phrases that you want to display on each case:
 
 ```javascript
@@ -14,5 +14,6 @@ $('#pass').strongpass({
    warning: '#pass-result'
 });
 ```
-
-Demo: [http://laantorcha.net/strongpass/](http://laantorcha.net/strongpass/)
+Live Demo
+---------
+[http://laantorcha.net/strongpass/](http://laantorcha.net/strongpass/)
