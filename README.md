@@ -15,3 +15,4 @@ $('#pass').strongpass({
 });​
 </pre>
 </div>
+<p>Demo: <a href="http://laantorcha.net/strongpass/">http://laantorcha.net/strongpass/</a>
