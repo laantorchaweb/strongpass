@@ -12,6 +12,7 @@ $('#pass').strongpass({
    medium: 'Not so strong...',
    weak: 'You can\'t be serious',
    warning: '#pass-result'
+});
 ```
 
 Demo: [http://laantorcha.net/strongpass/](http://laantorcha.net/strongpass/)
