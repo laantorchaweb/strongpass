@@ -3,9 +3,9 @@
   var pluginName = 'strongpass',
       document = window.document,
       defaults = {
-            strong: 'Strong!',
-            medium: 'Medium!',
-            weak: 'Weak!'
+        strong: 'Strong!',
+        medium: 'Medium!',
+        weak: 'Weak!'
       };
 
   function Plugin( element, options ) {
@@ -21,7 +21,7 @@
   }
 
   Plugin.prototype.init = function () {
-         
+
          var _this = this;
 
          if( !this.options.warning ) {
@@ -32,7 +32,7 @@
           var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
           var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
           var enoughRegex = new RegExp("(?=.{6,}).*", "g");
-           
+
           var test  = $(_this.element).val(),
               $pass = $(_this.options.warning);
 
@@ -48,12 +48,14 @@
            else {
                $pass.removeClass().addClass('weak').html(_this.options.weak);
            }
+
            return true;
+
         });
   };
 
   Plugin.prototype.createAlert = function() {
-    
+
     this.options.warning = '#strongPass';
 
     $('<span />').attr('id', 'strongPass').insertAfter(this.element);
